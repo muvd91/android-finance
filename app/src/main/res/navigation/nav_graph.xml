@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entriesFragment">
+
+    <fragment
+        android:id="@+id/entriesFragment"
+        android:name="com.mobile.finance.entries.EntryListFragment"
+        android:label="fragment_entries"
+        tools:layout="@layout/fragment_entries" >
+        <action
+            android:id="@+id/action_entriesFragment_to_newEntryFragment"
+            app:destination="@id/newEntryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newEntryFragment"
+        android:name="com.mobile.finance.newentry.NewEntryFragment"
+        android:label="fragment_new_entry"
+        tools:layout="@layout/fragment_new_entry">
+        <action
+            android:id="@+id/action_newEntryFragment_to_entriesFragment"
+            app:destination="@id/entriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/remindersFragment"
+        android:name="com.mobile.finance.reminders.ReminderListFragment"
+        android:label="fragment_reminders"
+        tools:layout="@layout/fragment_reminders" />
+
+</navigation>
